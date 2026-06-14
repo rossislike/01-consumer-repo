@@ -12,6 +12,6 @@ permissions:
 
 jobs:
     security:
-        uses: rossislike/01-oidc-security-pipeline/.github/workflows/security.yml@v1
+        uses: rossislike/01-oidc-security-pipeline/.github/workflows/security.yml@main
         with:
             deploy-role-arn: arn:aws:iam::442359104502:role/github-oidc-deploy
