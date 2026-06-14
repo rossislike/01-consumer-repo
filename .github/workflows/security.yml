@@ -1,0 +1,17 @@
+name: Security
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+
+permissions:
+    contents: read
+    id-token: write
+    pull-requests: write
+
+jobs:
+    security:
+        uses: rossislike/01-oidc-security-pipeline/.github/workflows/security.yml@v1
+        with:
+            deploy-role-arn: arn:aws:iam::442359104502:role/github-oidc-deploy
